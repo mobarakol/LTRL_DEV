@@ -51,7 +51,8 @@ def visualize(epoch):
     points_our = np.array(points_our)
     points_gt = np.array(points_gt)
     fig = plt.figure()
-    ax = fig.gca(projection='3d')
+    # ax = fig.gca(projection='3d')
+    ax =  fig.add_subplot(projection = '3d')
     # ax.set_title("3D_Curve")
     ax.set_xlabel("x [mm]")
     ax.set_ylabel("y [mm]")
@@ -63,8 +64,8 @@ def visualize(epoch):
 
     plt.savefig('vo_sq2_{}.png'.format(epoch),dpi=600)
 
-if __name__ == "__main__":
-    visualize(0)
+# if __name__ == "__main__":
+#     visualize(0)
 
 '''
 # new a figure and set it into 3d

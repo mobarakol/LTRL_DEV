@@ -10,7 +10,7 @@ from layers import transformation_from_parameters
 from utils import readlines
 from options import MonodepthOptions
 from datasets import SCAREDRAWDataset
-# from visualize_pose import visualize
+from visualize_pose import visualize
 
 # from https://github.com/tinghuiz/SfMLearner
 def dump_xyz(source_to_target_transformations):
@@ -159,7 +159,7 @@ def evaluate(opt):
     # cv2.imwrite('test.png',img.astype(np.uint8))
     # print(img.max(), img.min())
     
-    # visualize(opt.load_weights_folder[-2:])
+    visualize(opt.load_weights_folder[-2:])
 
 if __name__ == "__main__":
     options = MonodepthOptions()
